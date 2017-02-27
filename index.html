@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html class="no-js" lang="en-us">
+<head>
+    <title>JS Widget Challenge</title>
+    <meta name="theme-color" content="#db0a5b">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+        <div class="filter-options">
+            <div class="filter">
+                <div class="dropdown">
+                    <div>
+                        <a href="#">
+                            <span class="filter-title">
+                                Hosts Dropdown
+                                <span class="caret"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="mutliSelect" id="mutliSelect">
+                            <ul id="theList">
+                                    <input type="text" onkeyup="filter(this)"/>
+                                    <button type="button" id="assending" class="btn btn-default btn-xs pull-right" onclick="return assendingorder();">
+                                        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" id="descending" class="btn btn-default btn-xs pull-right" onclick="return desendingorder()"/>
+                                        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                    </button>
+                                    <button type="button" onclick="deleteHosts()" class="btn btn-danger btn-xs pull-right" value="Delete Host"/>Delete Host</button>
+                                    <button type="button" id="show-more"  class="btn btn-primary btn-xs" value="Show More"/>Show All</button>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div>
+        <button type="button" class="btn btn-info btn-lg col-md-offset-5" id="add-random-host" onclick="addrandomHosts()">Add a Random Host</button>
+        <button type="button" class="btn btn-warning btn-lg" id="toggle-error-mode">Toggle Error Mode</button>
+    </div>
+</div>
+
+</body>
+</html>
